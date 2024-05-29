@@ -7,10 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'neutralsilver':'#F5F7FA',
-        'neutralDGrey':'#4D4D4D',
-        'brandPrimary':'#4CAF4F',
-        'neutralDGrey':'#717171',
+        customGray:'#141416',
+        customWhite: '#FFFFFF',
+        customColor: '#533F4D',
+        customColor1: '#A3492F', // Add your first custom color here
+        customColor2: '#EE7C53',
+        customColor3: '#FFA500'
+
       }
     },
   },
