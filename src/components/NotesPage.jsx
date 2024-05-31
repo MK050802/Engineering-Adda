@@ -3,7 +3,7 @@ import foldImage from '../pages/images/folder.png'
 
 function NotesPage() {
   return (
-    <div className='inline-flex flex-col  items-center m-5 '>
+    <div className='inline-flex flex-col  items-center m-5 text-white '>
       <div>
         <img src={foldImage} alt="empty" className="w-32 h-32" />
       </div>

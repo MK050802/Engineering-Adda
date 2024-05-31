@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import NotesPage from "../components/NotesPage";
 
 const NotesAndPyq = () => {
   const notes = [
@@ -6,26 +7,31 @@ const NotesAndPyq = () => {
       College: "NIT Kurukshetra",
       Branch: "ECE",
       Subject: "ECPC-40",
+      type: "notes"
     },
     {
       College: "NIT Kurukshetra",
       Branch: "ECE",
       Subject: "PHIR-11",
+      type:"pyq"
     },
     {
       College: "NIT Kurukshetra",
       Branch: "CS",
       Subject: "CSIR-11",
+      type: "pyq"
     },
     {
       College: "NIT Kurukshetra",
       Branch: "CE",
       Subject: "CE-22",
+      type : "notes"
     },
     {
       College: "NIT Jamshedpur",
       Branch: "IT",
       Subject: "IT-32",
+      type : "notes"
     },
     {
       College: "NIT Jamshedpur",
@@ -52,44 +58,42 @@ const NotesAndPyq = () => {
   const [college, setCollege] = useState("");
   const [branch, setBranch] = useState("");
   const [allBranches, setAllBranches] = useState([]);
-  const [allSubject,setAllSubject]= useState([]);
-  const [uniqueColleges,setUniqueColleges] =useState([]);
+  const [allSubject, setAllSubject] = useState([]);
+  const [uniqueColleges, setUniqueColleges] = useState([]);
   const [subject, setSubject] = useState("");
 
-  useEffect(()=>{
+  useEffect(() => {
     const coll = [...new Set(notes.map((note) => note.College))];
     setUniqueColleges(coll);
-  },[]);
+  }, []);
 
   useEffect(() => {
     const b = notes.filter((note) => note.College === college);
-    const uniqueB=[...new Set(b.map(((x) => x.Branch)))];
+    const uniqueB = [...new Set(b.map((x) => x.Branch))];
     setAllBranches(uniqueB);
   }, [college]);
 
   useEffect(() => {
-    const sc = notes.filter((note)=>note.College===college);
-    const sb = sc.filter((note)=>note.Branch===branch);
+    const sc = notes.filter((note) => note.College === college);
+    const sb = sc.filter((note) => note.Branch === branch);
     const uniqueSub = [...new Set(sb.map((x) => x.Subject))];
-      setAllSubject(uniqueSub);
-  },[college, branch]);
+    setAllSubject(uniqueSub);
+  }, [college, branch]);
 
   return (
-    <div className="mt-20 flex bg-gradient-to-r h-screen w-screen space-x-96 justify-center">
-      <div className="flex flex-col items-center ">
-
+    <div className="mt-20 flex flex-col bg-gradient-to-r min-h-screen w-screen justify-center items-center   min-height: 100vh;">
+      <div className="flex flex-col items-center">
         {/* header name  */}
         <div className="text-white text-5xl pl-10 pt-6 w-auto inline-block mb-2 font-bold mb-8">
           <span className="text-orange-500">Notes</span>
           <span> & </span>
           <span className="text-orange-500">PYQ</span>
         </div>
-        
+
         {/* input fields */}
         <div className="flex flex-row space-x-20 mt-8 p-0 ml-8">
-
-           {/* college input */}
-           <div>
+          {/* college input */}
+          <div>
             <label
               htmlFor="college"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -102,13 +106,17 @@ const NotesAndPyq = () => {
             >
               <option selected>College</option>
               {uniqueColleges.map((college) => {
-                return <option value={college}>{college}</option>;
+                return (
+                  <option value={college} key={college}>
+                    {college}
+                  </option>
+                );
               })}
             </select>
-           </div>
+          </div>
 
-           {/* branch input  */}
-           <div>
+          {/* branch input  */}
+          <div>
             <label
               htmlFor="branch"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -123,13 +131,17 @@ const NotesAndPyq = () => {
                 Branch
               </option>
               {allBranches.map((b) => {
-                return <option value={b}>{b}</option>;
+                return (
+                  <option value={b} key={b}>
+                    {b}
+                  </option>
+                );
               })}
             </select>
-           </div>
+          </div>
 
-           {/* subject code  */}
-           <div>
+          {/* subject code  */}
+          <div>
             <label
               htmlFor="subject"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -143,14 +155,34 @@ const NotesAndPyq = () => {
               <option value="" disabled selected>
                 Subject Code
               </option>
-               {
-                 allSubject.map((sub => {
-                    return <option value={sub}>{sub}</option>;
-                 }))
-               }
+              {allSubject.map((sub) => {
+                return (
+                  <option value={sub} key={sub}>
+                    {sub}
+                  </option>
+                );
+              })}
             </select>
-           </div>
+          </div>
         </div>
+      </div>
+      <div className="mt-20 ml-52 ">
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
+        <NotesPage />
       </div>
     </div>
   );
