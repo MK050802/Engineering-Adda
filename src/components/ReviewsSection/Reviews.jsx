@@ -24,7 +24,6 @@ function Reviews() {
       color: "hue-rotate-[58deg]",
       photo: null,
     },
-
     {
       name: "user3",
       logo: "sass",
@@ -39,7 +38,6 @@ function Reviews() {
       color: "hue-rotate-[240deg]",
       photo: null,
     },
-
     {
       name: "user5",
       logo: "react",
@@ -70,8 +68,8 @@ function Reviews() {
   return (
     <div className="h-screen bg-[#19173284] text-white flex items-center justify-center">
       <div className="max-w-5xl">
-        <div className="text-center flex justify-center font-bold ">
-          <h1 className="text-3xl  mb-6 mt-1  pb-6">Featured Reviews</h1>
+        <div className="text-center flex justify-center font-bold">
+          <h1 className="text-3xl mb-6 mt-1 pb-6">Featured Reviews</h1>
         </div>
         <Swiper
           spaceBetween={50}
@@ -83,7 +81,7 @@ function Reviews() {
           autoplay={{
             delay: 3000,
           }}
-          // modules={[Autoplay]}
+          modules={[Autoplay]}
         >
           {langs.map((lang, i) => (
             <SwiperSlide key={i}>
@@ -106,8 +104,8 @@ function Reviews() {
                         class="text-5xl text-gray-500"
                       ></ion-icon>
                     )}
+                    <ion-icon name={`logo-${lang.logo}`}></ion-icon>
                   </div>
-
                   <h2 className="text-3xl mt-2 font-semibold">{lang.name}</h2>
                   <p className="para">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
