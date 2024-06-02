@@ -181,10 +181,9 @@ const NotesAndPyq = () => {
           const sb = sc.filter((note) => note.Branch === branch);
           const ss = sb.filter((note) => note.Subject===subject);
            setSubNote(ss);
-  })
+  },[college,branch,subject])
 
   
-
   return (
     <div className="flex flex-col bg-gradient-to-r min-h-screen w-screen justify-center items-center mt-20">
       <div className="flex flex-col items-center">
@@ -202,7 +201,7 @@ const NotesAndPyq = () => {
             <label
               htmlFor="college"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            ></label>
+            ></label> 
             <select
               id="college"
               className="bg-white border border-white text-white text-xl rounded-lg focus:ring-blue-700 focus:border-blue-500 block w-full pt-3.5 pl-5 pb-3.5 pr-5 dark:bg-orange-500 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-lg font-semibold"

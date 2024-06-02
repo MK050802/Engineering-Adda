@@ -1,7 +1,4 @@
 import Nav from "./components/Nav";
-import NotesAndPyq from "./pages/NotesAndPyq";
-import NotesPage from "./components/NotesPage";
-import AboutUs from "./pages/aboutUs";
 const App = () => {
   return (
     <>
