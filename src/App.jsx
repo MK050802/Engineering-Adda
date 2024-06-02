@@ -4,7 +4,7 @@
 // // import Slider from "./components/Homepage/Slider";
 // // import Carousel from "./components/Homepage/carousel.component";
 // import ImageSlider from "./components/Homepage/ImageSlider";
-import ReviewSlider from "./components/Homepage/ReviewSlider";
+// import ReviewSlider from "./components/Homepage/ReviewSlider";
 
 // const App = () => {
 //   // let slides = [
@@ -40,12 +40,13 @@ import ReviewSlider from "./components/Homepage/ReviewSlider";
 import React from "react";
 import Nav from "./components/Homepage/Nav";
 import Hero from "./components/Hero/Hero";
+import Reviews from "./components/ReviewsSection/Reviews";
 const App = () => {
   return (
     <div>
       <Nav />
       <Hero />
-      <ReviewSlider />
+      <Reviews />
     </div>
   );
 };
