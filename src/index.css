@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+
+
+@layer utilities{
+    .hero-bg-color{
+        @apply bg-gradient-to-tr from-customGray to-customColor2  dark:from-gray-900 dark:to-gray-800 dark:text-white;
+    }
+}

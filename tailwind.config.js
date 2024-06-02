@@ -6,6 +6,23 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        slideInLeft: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 2s ease-in-out',
+        slideInLeft: 'slideInLeft 1s ease-out forwards',
+      },
+      dropShadow: {
+        customGray: '0 4px 6px rgba(0, 0, 0, 0.4)',
+      },
       colors: {
         customGray:'#141416',
         customWhite: '#FFFFFF',
@@ -17,6 +34,7 @@ export default {
       }
     },
   },
+  
   plugins: [],
 }
 

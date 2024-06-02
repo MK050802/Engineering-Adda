@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Button from "./Button";
-// import "../App.css";
+import "../../App.css";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -69,8 +69,8 @@ const Nav = () => {
   ];
 
   return (
-    <div className="shadow-md w-full fixed top-0 left-0 z-10">
-      <div className="md:flex items-center justify-between bg-transparent bg-customGray py-4 md:px-10 px-4">
+    <div className="shadow-md w-full fixed top-0 left-0 z-10 rounded-2xl">
+      <div className="md:flex items-center justify-between  bg-customGray py-4 md:px-10 px-4">
         <div className="font-bold text-lg cursor-pointer flex items-center font-[Poppins] text-customWhite">
           <span className="text-2xl text-indigo-600 rounded-full mr-1 pt-1">
             <ion-icon name="logo-ionic"></ion-icon>
