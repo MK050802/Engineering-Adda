@@ -7,31 +7,121 @@ const NotesAndPyq = () => {
       College: "NIT Kurukshetra",
       Branch: "ECE",
       Subject: "ECPC-40",
-      type: "notes"
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "ECE",
+      Subject: "ECPP-4",
+      type: "pyq",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "ECE",
+      Subject: "ECPP-4",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "ECE",
+      Subject: "ECPP-4",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "ECE",
+      Subject: "ECPP-4",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "ECE",
+      Subject: "ECPP-4",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "CS",
+      Subject: "CS-21",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "CS",
+      Subject: "CS-21",
+      type: "pyq",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "CS",
+      Subject: "CS-21",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "CS",
+      Subject: "CS-40",
+      type: "pyq",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "CS",
+      Subject: "CS-30",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "ECE",
+      Subject: "ECPC-40",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "ECE",
+      Subject: "ECPC-40",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "ECE",
+      Subject: "ECPC-40",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "ECE",
+      Subject: "ECPC-40",
+      type: "notes",
+    },
+    {
+      College: "NIT Kurukshetra",
+      Branch: "ME",
+      Subject: "ME-33",
+      type: "notes",
     },
     {
       College: "NIT Kurukshetra",
       Branch: "ECE",
       Subject: "PHIR-11",
-      type:"pyq"
+      type: "pyq",
     },
     {
       College: "NIT Kurukshetra",
       Branch: "CS",
       Subject: "CSIR-11",
-      type: "pyq"
+      type: "pyq",
     },
     {
       College: "NIT Kurukshetra",
       Branch: "CE",
       Subject: "CE-22",
-      type : "notes"
+      type: "notes",
     },
     {
       College: "NIT Jamshedpur",
       Branch: "IT",
       Subject: "IT-32",
-      type : "notes"
+      type: "notes",
     },
     {
       College: "NIT Jamshedpur",
@@ -57,10 +147,14 @@ const NotesAndPyq = () => {
 
   const [college, setCollege] = useState("");
   const [branch, setBranch] = useState("");
+  const [subject, setSubject] = useState("");
   const [allBranches, setAllBranches] = useState([]);
   const [allSubject, setAllSubject] = useState([]);
   const [uniqueColleges, setUniqueColleges] = useState([]);
-  const [subject, setSubject] = useState("");
+  const [collNote,setCollNote] = useState([]);
+  const [branchNote, setBranchNote] = useState([]);
+  const [subNote, setSubNote] = useState([]);
+ 
 
   useEffect(() => {
     const coll = [...new Set(notes.map((note) => note.College))];
@@ -71,6 +165,7 @@ const NotesAndPyq = () => {
     const b = notes.filter((note) => note.College === college);
     const uniqueB = [...new Set(b.map((x) => x.Branch))];
     setAllBranches(uniqueB);
+    setCollNote(b);
   }, [college]);
 
   useEffect(() => {
@@ -78,10 +173,20 @@ const NotesAndPyq = () => {
     const sb = sc.filter((note) => note.Branch === branch);
     const uniqueSub = [...new Set(sb.map((x) => x.Subject))];
     setAllSubject(uniqueSub);
+    setBranchNote(sb);
   }, [college, branch]);
 
+  useEffect(() => {
+          const sc = notes.filter((note) => note.College === college);
+          const sb = sc.filter((note) => note.Branch === branch);
+          const ss = sb.filter((note) => note.Subject===subject);
+           setSubNote(ss);
+  })
+
+  
+
   return (
-    <div className="mt-20 flex flex-col bg-gradient-to-r min-h-screen w-screen justify-center items-center   min-height: 100vh;">
+    <div className="flex flex-col bg-gradient-to-r min-h-screen w-screen justify-center items-center mt-20">
       <div className="flex flex-col items-center">
         {/* header name  */}
         <div className="text-white text-5xl pl-10 pt-6 w-auto inline-block mb-2 font-bold mb-8">
@@ -167,22 +272,20 @@ const NotesAndPyq = () => {
         </div>
       </div>
       <div className="mt-20 ml-52 ">
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
-        <NotesPage />
+        {college && !branch && !subject
+          ? collNote.map((coll) => {
+              return <NotesPage type={coll.type} x={coll.College} />;
+            })
+          : college && branch && !subject
+          ? branchNote.map((coll) => {
+              return <NotesPage type={coll.type} x={coll.Branch}/>;
+            })
+          : college &&
+            branch &&
+            subject &&
+            subNote.map((coll) => {
+              return <NotesPage type={coll.type} x={coll.Subject} />;
+            })}
       </div>
     </div>
   );

@@ -6,10 +6,7 @@ const App = () => {
   return (
     <>
       <Nav />
-      {/* <AboutUs/> */}
-      <NotesAndPyq/>
-      {/* <NotesPage/> */}
-      {/* <div className=" w-full h-screen bg-indigo-200"></div> */}
+      <div className=" w-full h-screen bg-indigo-200"></div>
     </>
   );
 };
