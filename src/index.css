@@ -1,3 +1,4 @@
+@import url("https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +8,7 @@
         @apply bg-gradient-to-tr from-customGray to-customColor2 dark:from-gray-900 dark:to-gray-800 dark:text-white;
     }
 }
+
 .card {
     @apply relative w-72 cursor-pointer border-b-4 rounded-md bg-gradient-to-t from-white/20 h-44 text-center px-3 py-7 self-end duration-500 delay-100;
 }
