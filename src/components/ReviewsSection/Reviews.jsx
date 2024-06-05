@@ -68,7 +68,7 @@ function Reviews() {
   };
 
   return (
-    <div className="h-screen bg-[#00052a] text-white flex items-center justify-center">
+    <div className="h-screen bg-[#19173284] text-white flex items-center justify-center">
       <div className="max-w-5xl">
         <div className="text-center flex justify-center font-bold ">
           <h1 className="text-3xl  mb-6 mt-1  pb-6">Featured Reviews</h1>
@@ -83,7 +83,7 @@ function Reviews() {
           autoplay={{
             delay: 3000,
           }}
-          modules={[Autoplay]}
+          // modules={[Autoplay]}
         >
           {langs.map((lang, i) => (
             <SwiperSlide key={i}>

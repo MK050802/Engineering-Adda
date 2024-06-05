@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import Slider from "react-slick";
 import Image1 from "../../assets/imghero/studentnobackground.png";
-import Image2 from "../../assets/imghero/books.jpeg";
+import Image2 from "../../assets/imghero/jobwithoutback.png";
+
 import Image3 from "../../assets/imghero/jobwithoutback.png";
 
 import Button from "../Homepage/Button";
@@ -11,25 +12,25 @@ const HeroData = [
     id: 1,
     img: Image1,
     subtitle: "Beats Solo",
-    title1: "Wireless",
-    title2: "Headphone",
-    decription: "internship website for ur website",
+    title1: " Your one-stop destination for insights",
+    title2: "ShareIT",
+    decription: "internship website ",
   },
   {
     id: 2,
     img: Image2,
-    subtitle: "Beats Solo",
-    title1: "Wireless",
-    title2: "Headphone",
-    decription: "internship website for ur website",
+    subtitle: "Notes",
+    title1: " Igniting your passion for learning",
+    title2: "shareIT",
+    decription: "internship website",
   },
   {
     id: 3,
     img: Image3,
     subtitle: "Beats Solo",
-    title1: "Wireless",
-    title2: "Headphone",
-    decription: "internship website for ur website",
+    title1: " Because staying informed is cool",
+    title2: "ShareIT",
+    decription: "internship website ",
   },
 ];
 
@@ -83,7 +84,7 @@ const Hero = () => {
                     <h1 className="text-2xl sm:text-2xl lg:text-2xl font-bold animate-slideInLeft delay-100">
                       {data.subtitle}
                     </h1>
-                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold animate-slideInLeft delay-200">
+                    <h1 className="text-5xl sm:text-5xl lg:text-5xl font-bold animate-slideInLeft delay-200">
                       {data.title1}
                     </h1>
                     <h1 className="text-5xl uppercase text-white sm:text-[80px] md:text-[80px] xl:text-[100px] font-bold animate-slideInLeft delay-300">
