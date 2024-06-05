@@ -69,9 +69,9 @@ const Nav = () => {
   ];
 
   return (
-    <div className="shadow-md w-full fixed top-0 left-0 z-10 rounded-2xl">
-      <div className="md:flex items-center justify-between  bg-customGray py-4 md:px-10 px-4">
-        <div className="font-bold text-lg cursor-pointer flex items-center font-[Poppins] text-customWhite">
+    <div className="shadow-md w-full fixed top-0 left-0 z-10 rounded-2xl text-black">
+      <div className="md:flex items-center justify-between  bg-customWhite py-4 md:px-10 px-4">
+        <div className="font-bold text-lg cursor-pointer flex items-center font-[Poppins] text-black">
           <span className="text-2xl text-indigo-600 rounded-full mr-1 pt-1">
             <ion-icon name="logo-ionic"></ion-icon>
           </span>
@@ -97,7 +97,7 @@ const Nav = () => {
             >
               <a
                 href={link.link}
-                className="text-customWhite hover:text-customColor2 duration-500"
+                className="text-black hover:text-customColor2 duration-500"
                 onClick={(e) => {
                   if (link.submenu) {
                     e.preventDefault();

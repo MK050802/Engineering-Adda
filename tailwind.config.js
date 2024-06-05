@@ -29,7 +29,8 @@ export default {
         customColor: '#533F4D',
         customColor1: '#A3492F', // Add your first custom color here
         customColor2: '#EE7C53',
-        customColor3: '#FFA500'
+        customColor3: '#FFA500',
+        customColor4:'#231F20'
 
       }
     },

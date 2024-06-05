@@ -74,7 +74,7 @@ const Hero = () => {
 
   return (
     <div className="container">
-      <div className="overflow-hidden rounded-3xl min-h-[550px] sm:min-h-[650px] hero-bg-color flex justify-center items-center">
+      <div className="overflow-hidden rounded-3xl ml-20 mr-20 mt-50 min-h-[550px] sm:min-h-[550px] bg-customColor4 flex justify-center items-center">
         <div className="container pb-8 sm:pb-0">
           <Slider {...settings}>
             {HeroData.map((data) => (
@@ -99,7 +99,7 @@ const Hero = () => {
                       src={data.img}
                       alt=""
                       className="w-[300px] h-[300px] sm:w-[450px] sm:h-[390px] sm:scale-105 lg:scale-110 object-contain mx-auto
-                      drop-shadow-customGray relative z-40 hero-image"
+                      bg-orag=n relative z-40 hero-image"
                     />
                   </div>
                 </div>
