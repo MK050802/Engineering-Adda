@@ -44,6 +44,8 @@ import Reviews from "./components/ReviewsSection/Reviews";
 
 import Services from "./components/Services/Services";
 
+import Nav from "./components/Nav";
+
 const App = () => {
   return (
     <div>

@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+
       keyframes: {
         fadeIn: {
           '0%': { opacity: 0 },
@@ -30,12 +28,25 @@ export default {
         customColor1: '#A3492F', // Add your first custom color here
         customColor2: '#EE7C53',
         customColor3: '#FFA500',
-        customColor4:'#231F20'
+        customColor4:'#231F20',
+        brandPrimary: "#4CAF4F",
+        neutralDGrey: "#717171",
+        wholeBackground: "#231F20",
+        neutralDGrey: "#4D4D4D"
 
       }
+
+      // backgroundImage: (theme) => ({
+      //   "gradient-to-r": "linear-gradient(to right,  #141416,#231F20 )",
+      // }),
+      
+        // neutralsilver: "#F5F7FA",
+        
+   
+
     },
   },
   
   plugins: [],
-}
+};
 
