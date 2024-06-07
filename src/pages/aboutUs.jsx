@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-r">
+    <div className="flex items-center justify-center h-screen bg-sky-500">
       <div className="sm:flex items-center max-w-screen-xl">
         <div className="sm:w-1/2 p-10 mt-28">
           <div className="image object-center text-center">

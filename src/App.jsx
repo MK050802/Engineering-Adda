@@ -1,10 +1,16 @@
 import Nav from "./components/Nav";
+import JobAndIntern from "./pages/JobAndIntern";
+import NotesAndPyq from "./pages/NotesAndPyq";
+import AboutUs from "./pages/aboutUs";
+import JobCard from "./components/JobCard";
 const App = () => {
   return (
-    <>
+    <div className="">
       <Nav />
-      <div className=" w-full h-screen bg-indigo-200"></div>
-    </>
+      {/* <AboutUs/> */}
+      <JobAndIntern/>
+      {/* <JobCard/> */}
+    </div>
   );
 };
 
