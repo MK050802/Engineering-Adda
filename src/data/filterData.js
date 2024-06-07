@@ -1,23 +1,23 @@
 export const filters = [
   {
-    id: "job/Intern",
+    id: "job /eIntern",
     name: "Job/Intern",
     options: [
-      { value: "Job", label: "job" },
-      { value: "Intern", label: "intern" },
+      { value: "job", label: "Job" },
+      { value: "intern", label: "Intern" },
     ],
   },
   {
     id: "department",
     name: "Department",
     options: [
-      { value: "ECE", lable: "ece" },
-      { value: "CS", label: "cs" },
-      { value: "IT", label: "it" },
-      { value: "EE", label: "ee" },
-      { value: "ME", label: "me" },
-      { value: "CE", label: "ce" },
-      { value: "AI/ML", label: "it" },
+      { value: "ece", lable: "ECE" },
+      { value: "cs", label: "CS" },
+      { value: "it", label: "IT" },
+      { value: "ee", label: "EE" },
+      { value: "me", label: "ME" },
+      { value: "ce", label: "CE" },
+      { value: "ai/ml", label: "IT" },
     ],
   },
   {

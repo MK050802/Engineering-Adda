@@ -9,7 +9,7 @@ export default function JobCard(props) {
       <div className="flex flex-row mt-5 gap-5 ">
         <div className=" flex border-r border-gray-500 pr-2.5">
           <div class="text-gray-500 mr-2">
-            <i class="fas fa-clock"></i>
+            <i class="fas fa-clock text-orange-500"></i>
           </div>{" "}
           {props.duration} duration
         </div>

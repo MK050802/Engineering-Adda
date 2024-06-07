@@ -43,7 +43,7 @@ function JobAndIntern() {
   };
 
   return (
-    <div className="flex bg-sky-500 h-screen mt-20">
+    <div className="flex bg-sky-600 h-screen mt-20">
       <div className="flex flex-col">
         <div className="flex items-center justify-start mt-20 ml-36 mb-7  w-20 b text-gray-200 text-4xl font-semibold gap-36">
           {" "}
@@ -92,7 +92,7 @@ function JobAndIntern() {
                             />
                             <label
                               htmlFor={`filter-${section.id}-${optionIdx}`}
-                              className="ml-3 text-sm text-gray-600"
+                              className="ml-3 text-sm text-gray-200"
                             >
                               {option.label}
                             </label>
