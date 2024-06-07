@@ -43,16 +43,20 @@ import Hero from "./components/Hero/Hero";
 import Reviews from "./components/ReviewsSection/Reviews";
 
 import Services from "./components/Services/Services";
-
-import Nav from "./components/Nav";
+import UserStats from "./pages/UserStats";
+// import ReviewSlider from "./components/ReviewsSection/ReviewSlider";
+import Footer from "./pages/Footer/Footer";
 
 const App = () => {
   return (
     <div>
       <Nav />
       <Hero />
-      <Reviews />
+      {/* <ReviewSlider /> */}
       <Services />
+      <Reviews />
+      <UserStats />
+      <Footer />
     </div>
   );
 };

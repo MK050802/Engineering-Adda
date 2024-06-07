@@ -74,13 +74,13 @@ const Hero = () => {
 
   return (
     <div className="container">
-      <div className="overflow-hidden rounded-3xl ml-20 mr-20 mt-50 min-h-[550px] sm:min-h-[550px] bg-customColor4 flex justify-center items-center">
+      <div className="overflow-hidden rounded-3xl ml-20 mr-20 mt-36 min-h-[550px] sm:min-h-[550px] bg-sky-600 flex justify-center items-center border-b-2">
         <div className="container pb-8 sm:pb-0">
           <Slider {...settings}>
             {HeroData.map((data) => (
               <div key={data.id}>
                 <div className="grid grid-cols-1 sm:grid-cols-2">
-                  <div className="flex flex-col justify-center gap-4 sm:pl-3 pt-12 sm:pr-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
+                  <div className="flex flex-col justify-center gap-4 sm:pl-3 pt-12 sm:pr-0 text-center sm:text-left order-2 sm:order-1 relative z-10 ">
                     <h1 className="text-2xl sm:text-2xl lg:text-2xl font-bold animate-slideInLeft delay-100">
                       {data.subtitle}
                     </h1>

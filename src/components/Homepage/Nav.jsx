@@ -69,7 +69,7 @@ const Nav = () => {
   ];
 
   return (
-    <div className="shadow-md w-full fixed top-0 left-0 z-10 rounded-2xl text-black">
+    <div className="shadow-md w-full fixed top-0 left-0 z-10 rounded-2xl text-black border-b-2 border-black">
       <div className="md:flex items-center justify-between  bg-customWhite py-4 md:px-10 px-4">
         <div className="font-bold text-lg cursor-pointer flex items-center font-[Poppins] text-black">
           <span className="text-2xl text-indigo-600 rounded-full mr-1 pt-1">

@@ -13,10 +13,17 @@ export default {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(0)' },
         },
+        zoomIn: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.05)' },
+        },
       },
       animation: {
         fadeIn: 'fadeIn 2s ease-in-out',
         slideInLeft: 'slideInLeft 1s ease-out forwards',
+        
+          zoomIn: 'zoomIn 0.3s ease-in-out forwards'
+        
       },
       dropShadow: {
         customGray: '0 4px 6px rgba(0, 0, 0, 0.4)',
