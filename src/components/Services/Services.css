@@ -1,0 +1,33 @@
+/* .container {
+  max-width: 1200px;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.relative:hover .curtain {
+  opacity: 0;
+}
+
+.curtain {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+} */
+
+.featureBox {
+  box-shadow: 6px 6px 9px rgb(35, 34, 34); /* rfg shadow */
+}
+/* ho gya dekhhhhhhhh wo file import nhi kiya tha areee dekhhhhhhhhh */

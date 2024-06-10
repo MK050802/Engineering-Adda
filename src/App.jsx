@@ -1,17 +1,23 @@
-import Nav from "./components/Nav";
-import JobAndIntern from "./pages/JobAndIntern";
-import NotesAndPyq from "./pages/NotesAndPyq";
-import AboutUs from "./pages/aboutUs";
-import JobCard from "./components/JobCard";
+import React from "react";
+import Nav from "./components/Homepage/Nav";
+import Hero from "./components/Hero/Hero";
+import Reviews from "./components/ReviewsSection/Reviews";
+
+import Services from "./components/Services/Services";
+import UserStats from "./pages/UserStats";
+import Footer from "./pages/Footer/Footer";
+
 const App = () => {
   return (
-    <div className="">
+    <div>
       <Nav />
-      {/* <AboutUs/> */}
-      <JobAndIntern/>
-      {/* <JobCard/> */}
+      <Hero />
+      {/* <ReviewSlider /> */}
+      <Services />
+      <Reviews />
+      <UserStats />
+      <Footer />
     </div>
   );
 };
-
 export default App;
