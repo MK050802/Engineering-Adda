@@ -2,7 +2,7 @@ import React from "react";
 import { filters } from "../data/filterData";
 import JobCard from "../components/JobCard";
 import Footer from "./Footer/Footer";
-import filterIcon from "./images/filterIcon.png"
+import filterIcon from "./images/filterIcon.png";
 
 import {
   Disclosure,
@@ -41,7 +41,7 @@ function JobAndIntern() {
           <div className="flex items-center justify-start mt-20 ml-28 mb-7  w-20 b text-gray-200 text-5xl font-semibold gap-32">
             {" "}
             <span>Filter</span>
-             <img src={filterIcon} alt="" className="w-12 h-12" />
+            <img src={filterIcon} alt="" className="w-12 h-12" />
           </div>
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 ">
             <div className="mt-2 ml-32 h-96 w-72 shadow-custom">
