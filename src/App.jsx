@@ -1,9 +1,32 @@
 import React from "react";
 import LandingPage from "./pages/LandingPage";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
+import Nav from "./components/Homepage/Nav";
+import AboutUs from "./pages/aboutUs";
+import JobAndIntern from "./pages/JobAndIntern";
+import NotesAndPyq from "./pages/NotesAndPyq";
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Nav/>}>
+      <Route index element={<LandingPage/>} />
+      <Route path="aboutUs" element={<AboutUs/>}/>
+      <Route path="JobAndIntern" element={<JobAndIntern/>}/>
+      <Route path="NotesAndPyq" element={<NotesAndPyq/>}/>
+    </Route>
+  )
+);
+
 const App = () => {
   return (
     <div>
-      <LandingPage />
+      <RouterProvider router={router} />
     </div>
   );
 };

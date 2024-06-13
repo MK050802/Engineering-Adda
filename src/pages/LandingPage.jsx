@@ -5,6 +5,7 @@ import Reviews from "../components/ReviewsSection/Reviews";
 import Services from "../components/Services/Services";
 import UserStats from "./UserStats";
 import Footer from "./Footer/Footer";
+
 const LandingPage = () => {
   return (
     <div>
@@ -13,8 +14,9 @@ const LandingPage = () => {
       <Reviews />
       <Services />
       <UserStats />
-      <Footer />
+      <Footer/>
     </div>
   );
 };
+
 export default LandingPage;
