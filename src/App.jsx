@@ -10,6 +10,7 @@ import Nav from "./components/Homepage/Nav";
 import AboutUs from "./pages/aboutUs";
 import JobAndIntern from "./pages/JobAndIntern";
 import NotesAndPyq from "./pages/NotesAndPyq";
+import ProfilePage from "./pages/ProfilePage";
 
 
 const router = createBrowserRouter(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path="aboutUs" element={<AboutUs/>}/>
       <Route path="JobAndIntern" element={<JobAndIntern/>}/>
       <Route path="NotesAndPyq" element={<NotesAndPyq/>}/>
+      <Route path="ProfilePage" element={<ProfilePage/>}/>
     </Route>
   )
 );
