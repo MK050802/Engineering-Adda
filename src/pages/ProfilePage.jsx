@@ -3,9 +3,7 @@ import arya from "./images/arya.jpg"
 
 const ProfilePage = () => {
   return (
-    <div
-      className=" mx-auto mt-16 rounded  w-full overflow-hiddenpt-16  bg-sky-600 "
-    >
+    <div className=" mx-auto mt-16 rounded  w-full overflow-hiddenpt-16  bg-sky-600 ">
       <div
         className="h-[150px] bg-gradient-to-r from-orange-500 to-orange-400 ml-36 mr-36"
         style={{ boxShadow: "2px 0px 16px black, -2px 0px 16px black" }}
@@ -71,16 +69,15 @@ const ProfilePage = () => {
             About Me
           </h4>
           <p className="text-sm text-stone-700">
-            Hi ! Yaha kyu aaya hai bhai tu kuchh nhi hai mere pe lala pada hai
-            job
+            Hi, I'm Aryawarti. I'm a developer who writes clean code but can't
+            keep my desk tidy.
             <br />
-            ka, tere ko hai tabhi msg krna, Hi ! Yaha kyu aaya hai bhai tu kuchh
+            When I'm not debugging, you can find me turning coffee into code and
+            dreaming of the
             <br />
-            nhi hai mere pe ,job ho to bata, tere ko hai tabhi msg krna
-            <br />
-            nhi hai mere pe ,job ho to bata, tere ko hai tabhi msg krna
-            <br />
-            nhi hai mere pe ,job ho to bata, tere ko hai tabhi msg krna
+            day my code compiles without errors. My favorite programming
+            language is sarcasm, and <br /> my spirit animal is a rubber duck. Let's
+            merge conflicts and laugh at each other's syntax <br /> errors!
           </p>
         </div>
       </div>
