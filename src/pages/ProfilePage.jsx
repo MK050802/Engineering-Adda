@@ -48,20 +48,20 @@ const ProfilePage = () => {
                 ECE
               </span>
 
-              <span className="w-22 rounded-lg bg-indigo-100 px-4 py-2 h-8 text-xs font-medium text-indigo-800">
+              <span className="max-w-22 rounded-lg bg-indigo-100 px-4 py-2 h-8 text-xs font-medium text-indigo-800">
                 2021-2025
               </span>
-              <span className="w-32 rounded-lg bg-indigo-100 px-4 py-2 h-8 text-xs font-medium text-blue-800">
+              <span className="max-w-32 rounded-lg bg-indigo-100 px-4 py-2 h-8 text-xs font-medium text-blue-800">
                 Web Developer
               </span>
-              <span className="w-32 rounded-lg bg-indigo-100 px-4 h-8 py-2 text-xs font-medium text-indigo-800">
+              <span className="max-w-32 rounded-lg bg-indigo-100 px-4 h-8 py-2 text-xs font-medium text-indigo-800">
                 Flutter Developer
               </span>
-              <span className="w-32 rounded-lg bg-indigo-100 px-4 h-8 py-2 text-xs font-medium text-indigo-800">
-                Flutter Developer
+              <span className="max-w-32 rounded-lg bg-indigo-100 px-4 h-8 py-2 text-xs font-medium text-indigo-800">
+                DSA
               </span>
-              <span className="w-32 rounded-lg bg-indigo-100 px-4 h-8 py-2 text-xs font-medium text-indigo-800">
-                Flutter Developer
+              <span className="maxw-32 rounded-lg bg-indigo-100 px-4 h-8 py-2 text-xs font-medium text-indigo-800">
+                Problem solver
               </span>
             </div>
           </div>
