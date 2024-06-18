@@ -1,4 +1,5 @@
 import React from "react";
+
 import Nav from "../components/Homepage/Nav";
 import Hero from "../components/Hero/Hero";
 import Reviews from "../components/ReviewsSection/Reviews";
@@ -11,10 +12,10 @@ const LandingPage = () => {
     <div>
       <Nav />
       <Hero />
-      <Reviews />
       <Services />
+      <Reviews />
       <UserStats />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
