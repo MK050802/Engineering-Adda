@@ -64,7 +64,7 @@ const ProfilePage = () => {
             </div>
           </div>
         </div>
-        <div className="ml-12 mt-20">
+        <div className="flex flex-col ml-12 mt-20">
           <h4 className="text-2xl font-medium leading-3 mt-16 mb-8 text-slate-700">
             About Me
           </h4>
@@ -76,9 +76,16 @@ const ProfilePage = () => {
             dreaming of the
             <br />
             day my code compiles without errors. My favorite programming
-            language is sarcasm, and <br /> my spirit animal is a rubber duck. Let's
-            merge conflicts and laugh at each other's syntax <br /> errors!
+            language is sarcasm, and <br /> my spirit animal is a rubber duck.
+            Let's merge conflicts and laugh at each other's syntax <br />{" "}
+            errors!
           </p>
+          <button
+            type="button"
+            className="inline-flex w-28 cursor-pointer select-none appearance-none items-center justify-center space-x-1 rounded border border-gray-200 bg-orange-500 px-3 py-2 text-sm font-medium text-white transition hover:border-gray-300 active:bg-white hover:bg-gray-100 focus:border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 mt-16 mb-6 " 
+          >
+           My Notes
+          </button>
         </div>
       </div>
     </div>
