@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "../../App.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
 
   const Links = [
     { name: "HOME", link: "/" },
-    { name: "SERVICES", link: "/services" },
-    { name: "ABOUT", link: "/about" },
-    { name: "NOTES", link: "/notes" },
-    { name: "JOBS/INTERNSHIP", link: "/jobs-internship" },
-    { name: "CHAT", link: "/chat" },
-    { name: "CONTACT", link: "/contact" },
+    { name: "SEARCH PEOPLE", link: "/SearchPeople" },
+    { name: "CHAT BOX", link: "/contact" },
+    { name: "NOTES", link: "/NotesAndPyq" },
+    { name: "SHARE NOTES", link: "/notes" },
+    { name: "JOBS/INTERNSHIP", link: "/JobAndIntern" },
+    { name: "ABOUT US", link: "/aboutUs" },
   ];
 
   return (
@@ -63,7 +63,7 @@ const Nav = () => {
                   />
                 </span>
                 <svg
-                  className="w-5 h-5 text-gray-500 transition group-open:rotate-90"
+                  className="w-5 h-5 text-white transition group-open:rotate-90"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -93,7 +93,8 @@ const Nav = () => {
                         d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
                       ></path>
                     </svg>
-                    <a href="http://127.0.0.1:8000/user/dashboard">Profile</a>
+
+                    <a href="/ProfilePage">Profile</a>
                   </li>
 
                   <li className="flex gap-2 items-center">

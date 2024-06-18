@@ -8,8 +8,11 @@ import {
   FaBlog,
 } from "react-icons/fa";
 import "./Services.css";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+
   const services = [
     {
       icon: <FaBriefcase />,
@@ -17,24 +20,21 @@ const Services = () => {
       description:
         "Find the latest job opportunities tailored to your skills and interests.",
       borderColor: "border-slate-50",
+      link: "/job",
     },
     {
       icon: <FaGraduationCap />,
       title: "Internships",
       description: "Explore internships to gain valuable work experience.",
       borderColor: "border-slate-50",
+      link: "/job",
     },
     {
-      icon: <FaBook />,
-      title: "Share Notes",
-      description: "Share and access notes to help you study more effectively.",
+      icon: <FaBlog />,
+      title: "Search People",
+      description: "Read and share blog posts on a variety of topics.",
       borderColor: "border-slate-50",
-    },
-    {
-      icon: <FaStickyNote />,
-      title: "Notes & PYQ",
-      description: "Find previous year question papers for better preparation.",
-      borderColor: "border-slate-50",
+      link: "SearchPeople",
     },
     {
       icon: <FaComments />,
@@ -42,12 +42,22 @@ const Services = () => {
       description:
         "Engage in discussions with peers and experts in your field.",
       borderColor: "border-slate-50",
+      link: "/Chatting",
+    },
+
+    {
+      icon: <FaBook />,
+      title: "Share Notes",
+      description: "Share and access notes to help you study more effectively.",
+      borderColor: "border-slate-50",
+      link: "/Share Notes",
     },
     {
-      icon: <FaBlog />,
-      title: "Blog",
-      description: "Read and share blog posts on a variety of topics.",
+      icon: <FaStickyNote />,
+      title: "Notes & PYQ",
+      description: "Find previous year question papers for better preparation.",
       borderColor: "border-slate-50",
+      link: "/NotesAndPyq",
     },
   ];
 
@@ -56,7 +66,13 @@ const Services = () => {
       <div className="flex-1 max-w-4xl mx-auto p-10">
         <ul className="grid grid-cols-1 gap-10  sm:grid-cols-2 md:grid-cols-3 md:gap-14">
           {services.map((service, index) => (
-            <li key={index} className="list-none">
+            <li
+              key={index}
+              className="list-none "
+              onClick={() => {
+                navigate(service.link);
+              }}
+            >
               <button
                 className="relative bg-white rounded-lg overflow-hidden group featureBox h-68 gap-10 w-full"
                 style={{ border: "none", padding: 0 }}

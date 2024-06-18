@@ -151,10 +151,9 @@ const NotesAndPyq = () => {
   const [allBranches, setAllBranches] = useState([]);
   const [allSubject, setAllSubject] = useState([]);
   const [uniqueColleges, setUniqueColleges] = useState([]);
-  const [collNote,setCollNote] = useState([]);
+  const [collNote, setCollNote] = useState([]);
   const [branchNote, setBranchNote] = useState([]);
   const [subNote, setSubNote] = useState([]);
- 
 
   useEffect(() => {
     const coll = [...new Set(notes.map((note) => note.College))];
@@ -177,18 +176,17 @@ const NotesAndPyq = () => {
   }, [college, branch]);
 
   useEffect(() => {
-          const sc = notes.filter((note) => note.College === college);
-          const sb = sc.filter((note) => note.Branch === branch);
-          const ss = sb.filter((note) => note.Subject===subject);
-           setSubNote(ss);
-  },[college,branch,subject])
+    const sc = notes.filter((note) => note.College === college);
+    const sb = sc.filter((note) => note.Branch === branch);
+    const ss = sb.filter((note) => note.Subject === subject);
+    setSubNote(ss);
+  }, [college, branch, subject]);
 
-  
   return (
     <div className="flex flex-col bg-gradient-to-r min-h-screen w-screen justify-center items-center mt-20">
       <div className="flex flex-col items-center">
         {/* header name  */}
-        <div className="text-white text-5xl pl-10 pt-6 w-auto inline-block mb-2 font-bold mb-8">
+        <div className="text-white text-5xl pl-10 pt-6 w-auto inline-block mb-2 font-bold ">
           <span className="text-orange-500">Notes</span>
           <span> & </span>
           <span className="text-orange-500">PYQ</span>
@@ -201,10 +199,10 @@ const NotesAndPyq = () => {
             <label
               htmlFor="college"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            ></label> 
+            ></label>
             <select
               id="college"
-              className="bg-white border border-white text-white text-xl rounded-lg focus:ring-blue-700 focus:border-blue-500 block w-full pt-3.5 pl-5 pb-3.5 pr-5 dark:bg-orange-500 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-lg font-semibold"
+              className="bg-white border border-white text-gray-700 text-xl rounded-lg focus:ring-blue-700 focus:border-blue-500 block w-full pt-3.5 pl-5 pb-3.5 pr-5 dark:bg-orange-500 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500  font-semibold"
               value={college}
               onChange={(event) => setCollege(event.target.value)}
             >
@@ -227,7 +225,7 @@ const NotesAndPyq = () => {
             ></label>
             <select
               id="branch"
-              className="bg-white border border-white text-white text-xl rounded-lg focus:ring-blue-700 focus:border-blue-500 block w-full pt-3.5 pl-5 pb-3.5 pr-5 dark:bg-orange-500 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-lg font-semibold"
+              className="bg-white border border-white text-gray-700 text-xl rounded-lg focus:ring-blue-700 focus:border-blue-500 block w-full pt-3.5 pl-5 pb-3.5 pr-5 dark:bg-orange-500 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500  font-semibold"
               value={branch}
               onChange={(event) => setBranch(event.target.value)}
             >
@@ -252,7 +250,7 @@ const NotesAndPyq = () => {
             ></label>
             <select
               id="subject"
-              className="bg-white border border-white text-white text-xl rounded-lg focus:ring-blue-700 focus:border-blue-500 block w-full pt-3.5 pl-5 pb-3.5 pr-5 dark:bg-orange-500 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-lg font-semibold"
+              className="bg-white border border-white text-gray-700 text-xl rounded-lg focus:ring-blue-700 focus:border-blue-500 block w-full pt-3.5 pl-5 pb-3.5 pr-5 dark:bg-orange-500 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500  font-semibold"
               value={subject}
               onChange={(event) => setSubject(event.target.value)}
             >
@@ -277,7 +275,7 @@ const NotesAndPyq = () => {
             })
           : college && branch && !subject
           ? branchNote.map((coll) => {
-              return <NotesPage type={coll.type} x={coll.Branch}/>;
+              return <NotesPage type={coll.type} x={coll.Branch} />;
             })
           : college &&
             branch &&
