@@ -1,59 +1,62 @@
 import React from "react";
-// import bgImg from "./assets/img1.jpg";
-import { useForm } from "react-hook-form";
+import * as Components from "./Login";
 
-export default function Form() {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
-
-  // console.log(watch('username'));
-
+function Registration() {
+  const [signIn, toggle] = React.useState(true);
   return (
-    <section>
-      <div className="register">
-        <div className="col-1">
-          <h2>Sign In</h2>
-          <span>register and enjoy the service</span>
+    <div className="outerContainer">
+      <Components.Container>
+        <Components.SignUpContainer signinIn={signIn}>
+          <Components.Form>
+            <Components.Title>Create Account</Components.Title>
+            <Components.Input type="text" placeholder="Name" />
+            <Components.Input type="email" placeholder="Email" />
+            <Components.Input type="password" placeholder="Password" />
+            <Components.Input type="text" placeholder="College" />
+            <Components.Input type="text" placeholder="Branch" />
+            <Components.Input type="text" placeholder="Passing Year" />
+            <Components.Button>Sign Up</Components.Button>
+          </Components.Form>
+        </Components.SignUpContainer>
 
-          <form
-            id="form"
-            className="flex flex-col"
-            onSubmit={handleSubmit(onSubmit)}
-          >
-            <input
-              type="text"
-              {...register("username")}
-              placeholder="username"
-            />
-            <input
-              type="text"
-              {...register("password")}
-              placeholder="password"
-            />
-            <input
-              type="text"
-              {...register("confirmpwd")}
-              placeholder="confirm password"
-            />
-            <input
-              type="text"
-              {...register("mobile", { required: true, maxLength: 10 })}
-              placeholder="mobile number"
-            />
-            {errors.mobile?.type === "required" && "Mobile Number is required"}
-            {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
-            <button className="btn">Sign In</button>
-          </form>
-        </div>
-        <div className="col-2">
-          <img src={bgImg} alt="" />
-        </div>
-      </div>
-    </section>
+        <Components.SignInContainer signinIn={signIn}>
+          <Components.Form>
+            <Components.Title>Sign in</Components.Title>
+            <Components.Input type="email" placeholder="Email" />
+            <Components.Input type="password" placeholder="Password" />
+            <Components.Anchor href="#">
+              Forgot your password?
+            </Components.Anchor>
+            <Components.Button>Sigin In</Components.Button>
+          </Components.Form>
+        </Components.SignInContainer>
+
+        <Components.OverlayContainer signinIn={signIn}>
+          <Components.Overlay signinIn={signIn}>
+            <Components.LeftOverlayPanel signinIn={signIn}>
+              <Components.Title>Welcome Back!</Components.Title>
+              <Components.Paragraph>
+                To keep connected with us please login with your personal info
+              </Components.Paragraph>
+              <Components.GhostButton onClick={() => toggle(true)}>
+                Sign In
+              </Components.GhostButton>
+            </Components.LeftOverlayPanel>
+
+            <Components.RightOverlayPanel signinIn={signIn}>
+              <Components.Title>Hello, Friend!</Components.Title>
+              <Components.Paragraph>
+                Enter Your personal details and start journey with us
+              </Components.Paragraph>
+              <Components.GhostButton onClick={() => toggle(false)}>
+                Sigin Up
+              </Components.GhostButton>
+            </Components.RightOverlayPanel>
+          </Components.Overlay>
+        </Components.OverlayContainer>
+      </Components.Container>
+    </div>
   );
 }
+
+export default Registration;

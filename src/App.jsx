@@ -11,9 +11,8 @@ import AboutUs from "./pages/aboutUs";
 import JobAndIntern from "./pages/JobAndIntern";
 import NotesAndPyq from "./pages/NotesAndPyq";
 import ProfilePage from "./pages/ProfilePage";
-// import Form from "./pages/Auth/Registration";
-
 import SearchPeople from "./pages/SearchPeople";
+import Registration from "./pages/Auth/Registration";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="NotesAndPyq" element={<NotesAndPyq />} />
       <Route path="ProfilePage" element={<ProfilePage />} />
       <Route path="SearchPeople" element={<SearchPeople />} />
+      <Route path="Registration" element={<Registration />} />
     </Route>
   )
 );

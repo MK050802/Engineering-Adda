@@ -8,6 +8,9 @@
         @apply bg-gradient-to-tr from-customGray to-customColor2 dark:from-gray-900 dark:to-gray-800 dark:text-white;
     }
 }
+/* body {
+  @apply bg-gray-100 flex items-center justify-center h-screen m-0 font-sans;
+} */
 
 .card {
     /* @apply relative w-72 cursor-pointer border-b-4 rounded-md h-44 text-center px-3 py-7 self-end duration-500 delay-100; */
