@@ -11,7 +11,8 @@ import AboutUs from "./pages/aboutUs";
 import JobAndIntern from "./pages/JobAndIntern";
 import NotesAndPyq from "./pages/NotesAndPyq";
 import ProfilePage from "./pages/ProfilePage";
-// import Form from "./pages/Auth/Registration";
+import ShareNotes from "./pages/ShareNotes";
+
 
 import SearchPeople from "./pages/SearchPeople";
 
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="NotesAndPyq" element={<NotesAndPyq />} />
       <Route path="ProfilePage" element={<ProfilePage />} />
       <Route path="SearchPeople" element={<SearchPeople />} />
+      <Route path="ShareNotes" element={<ShareNotes />} />
     </Route>
   )
 );

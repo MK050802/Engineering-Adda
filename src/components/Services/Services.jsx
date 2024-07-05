@@ -20,21 +20,21 @@ const Services = () => {
       description:
         "Find the latest job opportunities tailored to your skills and interests.",
       borderColor: "border-slate-50",
-      link: "/job",
+      link: "/JobAndIntern",
     },
     {
       icon: <FaGraduationCap />,
       title: "Internships",
       description: "Explore internships to gain valuable work experience.",
       borderColor: "border-slate-50",
-      link: "/job",
+      link: "/JobAndIntern",
     },
     {
       icon: <FaBlog />,
       title: "Search People",
       description: "Read and share blog posts on a variety of topics.",
       borderColor: "border-slate-50",
-      link: "SearchPeople",
+      link: "/SearchPeople",
     },
     {
       icon: <FaComments />,
